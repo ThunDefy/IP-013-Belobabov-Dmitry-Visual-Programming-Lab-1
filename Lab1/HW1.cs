@@ -12,13 +12,13 @@
 
             if (n <= 0) throw new HWException("Введено некорректное значение! Количество касс должно быть больше нуля.");
 
-            while (i != buyers - 1)
+            while (i != buyers-1 )
             {
                 for (int j = 0; j < n; j++)
                 {
                     if (BuyingNow[j] == 0)
                     {
-                        i++;
+                        if(i<buyers-1)i++; 
                         BuyingNow[j] = customers[i];
                         time[j] += customers[i];
                     }
